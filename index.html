@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<title> foodmap </title>
+	</head>
+	<body>
+
+    <!-- splash -->
+    <div class="container" id="splash-intro">
+      <div class="row">
+        <div class="col s12">
+          <h1> Foodmap </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- header -->
+    <nav class="hide" id="splash-page">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center"> foodmap </a>
+      </div>
+    </nav>
+
+    <!-- MAPA -->
+    <div class="container hide">
+      <div class="row">
+        <div class="col s12">
+          <h2> MAPA </h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subtítulo del input -->
+    <div class="container hide">
+      <div class="row">
+        <div class="col s12">
+          <h3> Comida cerca de ti </h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- input -->
+    <div class="container hide">
+      <div class="row">
+        <div class="col s12">
+          <form>
+            <div class="input-field">
+              <input id="search" class="clear-input" type="search" required placeholder="Ingresa tu platillo favorito">
+              <label class="label-icon" for="search"><i class="material-icons"></i></label>
+            </div>           
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- images -->
+    <div class="container contain-food hide">
+      <<div class="row">
+        <div class="col s6 col-image">
+          <!--<img src="http://lorempixel.com/350/200/food/" class="waves-effect waves-light modal-trigger responsive-img food-restaurant" data-target="modal1" alt="food">-->
+        </div>
+        <div class="col s6 col-image">
+          <!--<img src="http://lorempixel.com/350/200/food/" class="waves-effect waves-light modal-trigger responsive-img food-restaurant" data-target="modal1" alt="food">-->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4 col-image">
+          <!--<img src="http://lorempixel.com/350/200/food/" class="waves-effect waves-light modal-trigger responsive-img food-restaurant" data-target="modal1" alt="food">-->
+        </div>
+        <div class="col s4 col-image">
+          <!--<img src="http://lorempixel.com/350/200/food/" class="waves-effect waves-light modal-trigger responsive-img food-restaurant" data-target="modal1" alt="food">-->
+        </div>
+        <div class="col s4 col-image">
+          <!--<img src="http://lorempixel.com/350/200/food/" class="waves-effect waves-light modal-trigger responsive-img food-restaurant" data-target="modal1" alt="food">-->
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal1" class="modal">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X</a>
+      <div class="modal-content">
+        <!--<h4> Silvana </h4>
+        <img src="http://lorempixel.com/350/200/food/" alt="mapa">
+        <p> dirección </p>
+        <p> servicio a domicilio </p>
+        <a class="waves-effect waves-light btn"> Pedir ahora </a>-->
+      </div>
+    </div>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>
