@@ -2,3 +2,17 @@ body, nav {
 	background-color: black;
 	color: white;
 }
+
+h1 {
+	text-align: center;
+	padding-top: 3em;
+}
+
+h4, .address {
+	color: black;
+}
+
+input {
+	background-color: black !important;
+	color: white !important;
+}
