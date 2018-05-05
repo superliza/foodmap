@@ -10,30 +10,29 @@ const infoModal = (e) => {
 
 const paintData = () => {
 	let restaurants = data.restaurants;
-
-	for (item of restaurants) {
-		let photo = item.photo;
-		let id = item.id;
-
-		let $col = $('<div />', {'class': 'col s6 col-image'});
-		let $ancourt = $('<a />', {'class': 'waves-effect waves-light modal-trigger food-modal'});
-		let $img = $('<img />', {'class': 'responsive-img'});
-		let $h5 = $('<h5 />', {'class': 'name'});
-
-		$ancourt.attr('href', '#modal1');
-		$ancourt.attr('data-name', item.name);
-		$img.attr('data-name', item.name);
-		$img.attr('data-address', item.address);
-		$img.attr('data-food', item.food);
-		$img.attr('src', photo);
-		$h5.text(item.name);
-		
-		$col.append($h5);
-		$col.append($ancourt);
-		$ancourt.append($img);
-		$pictures.append($col);
-	}
+	let template = 
+		'<div class="col s6 col-image">' +
+			'<h5 class="name"> NAME </h5>' +
+			'<a class="waves-effect waves-light modal-trigger food-modal" href="#modal1" data-name="NAME">' +
+				'<img class="responsive-img" data-name="NAME" data-address="ADDRESS" data-food="FOOD" src="SRC">' +
+			'</a>' +
+		'</div>';
 	
+	let templateRestaurants = "";
+	
+	for (item of restaurants) {
+		// console.log(item)
+		let $restaurantName = $('<h5 />');
+		$restaurantName.text(item.name);
+		templateRestaurants += template.replace("NAME", item.name)
+									   .replace("NAME", item.name)
+									   .replace('NAME', item.name)
+									   .replace('ADDRESS', item.address)
+									   .replace('FOOD', item.food)
+									   .replace('SRC', item.photo);
+	}
+
+	$pictures.html(templateRestaurants);
 }
 
 const search = (e) => {
