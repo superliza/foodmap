@@ -1,119 +1,64 @@
+let $inputSearch = $('#search');	
+let $pictures = $('#pictures');
 
+const infoModal = (e) => {
+	let $name = $('h4').text(e.target.dataset.name);
+	let $address = $('.address').text(e.target.dataset.address);
+	$('.modal-content').append($name);
+	$('.moda-content').append($address);
+}
 
-//Traemos elementos
-// var $inputSearch = $("#search");
-// var $clearInput = $(".clear-input");
-// var accessData = data['restaurants'];
+const paintData = () => {
+	let restaurants = data.restaurants;
 
-// function loadPage() {
-// 	//vista splash
-// 	setTimeout(function() {
-// 		$('#splash-intro').fadeOut();
-// 		$('div, nav').removeClass("hide");
-// 	}, 2000)
-// 	//asignamos evento al input
-// 	$inputSearch.keyup(filterFood);
-// }
+	for (item of restaurants) {
+		let photo = item.photo;
+		let id = item.id;
 
-// function paintHTML(restaurant) {
+		let $col = $('<div />', {'class': 'col s6 col-image'});
+		let $ancourt = $('<a />', {'class': 'waves-effect waves-light modal-trigger food-modal'});
+		let $img = $('<img />', {'class': 'responsive-img'});
+		let $h5 = $('<h5 />', {'class': 'name'});
 
-// 	var $colImages = $('.col-image');
-// 	//se crean elementos
-// 	var $imagesFood = $('<img />', 
-// 		{'class': 'waves-effect waves-light modal-trigger responsive-img food-restaurant'});
-
-// 	//se agregan atributos y todo lo que necesite
-// 	$imagesFood.attr('src', data['restaurants']['photo']);
-// 	$imagesFood.attr('data-target', 'modal1');
-// 	$imagesFood.attr('alt', 'food');
-
-// 	//se agregan al padre
-// 	$colImages.append($imagesFood);
-// }
-
-// //se accede a la data y se va filtrando
-// function filterFood(e) {
-// 	var arrFood = [];
-// 	e.preventDefault();
-// 	// se crea una variable y lo que ingrese el usuario en el input, convertirlo a minúsculas y elimine los espacios en blanco de extremo a extremo
-// 	var $searchFood = $inputSearch.val().trim().toLowerCase();
-
-// 	// le decimos que el valor de la longitud de la búsqueda del usuario es mayor a 0
-// 	if($inputSearch.val().trim().length > 0) {
-// 		var $filterRestaurant = accessData.filter(function(restaurant){ //filtrar la búsqueda de la data del array dado
-// 			//console.log(restaurant['name'].toLowerCase().indexOf($searchFood) >= 0);
-// 			//console.log(restaurant);
-// 			/*for(var i in restaurant) { //por medio de un for in ingreso a los objetos del array
-// 				console.log(restaurant[i]);*/
-// 				return restaurant.name.toLowerCase().indexOf($searchFood) >= 0; //y le digo que me regrese los values de las keys por el índice que se buscó en el input
-// 				//.toLowerCase().indexOf($searchFood) >= 0
-						
-// 		});	
-// 			//console.log(allRestaurant);
+		$ancourt.attr('href', '#modal1');
+		$ancourt.attr('data-name', item.name);
+		$img.attr('data-name', item.name);
+		$img.attr('data-address', item.address);
+		$img.attr('data-food', item.food);
+		$img.attr('src', photo);
+		$h5.text(item.name);
 		
-// 		$clearInput.empty();
-// 		$filterRestaurant.forEach(function(restaurant) {
-// 			//console.log($filterRestaurant);
-// 			//paintHTML(restaurant);
-// 			for (var i in restaurant) {
-// 				var allRestaurant = restaurant[i];
-// 				paintHTML(allRestaurant);
-// 			}
-// 		});
-
-// 	} 
-// }
+		$col.append($h5);
+		$col.append($ancourt);
+		$ancourt.append($img);
+		$pictures.append($col);
+	}
 	
-// 	//console.log(accessData);
+}
 
-// $(document).ready(loadPage);
+const search = (e) => {
+	e.preventDefault();
+	$('h5').each(function() {
+		let searchFood = $inputSearch.val().trim().toLowerCase();
+		if ($(this).text().toLowerCase().indexOf(searchFood) !== -1) {
+			$(this).closest('div').show();
+		} else {
+			$(this).closest('div').hide();
+		}
+		
+	})
+	
+}
 
-var $inputSearch = $("#search");
-var $clearInput = $(".clear-input");
-var accessData = data['restaurants'];
-
-function loadPage() {
-	setTimeout(function() {
+const loadPage = () => {
+	setTimeout(() => {
 		$('#splash-intro').fadeOut();
 		$('div, nav').removeClass("hide");
 	}, 2000)
-	$inputSearch.keyup(filterFood);
+	paintData();
+	$inputSearch.keyup(search);
+	$('.modal').modal();
+	$(document).on('click', '.modal-trigger', infoModal);
 }
 
-function paintHTML(restaurant) {
-
-	var $colImages = $('.col-image');
-	//se crean elementos
-	var $imagesFood = $('<img />', 
-		{'class': 'waves-effect waves-light modal-trigger responsive-img food-restaurant'});
-
-	//se agregan atributos y todo lo que necesite
-	$imagesFood.attr('src', restaurant['photo']);
-	$imagesFood.attr('data-target', 'modal1');
-	$imagesFood.attr('alt', 'food');
-
-	//se agregan al padre
-	$colImages.append($imagesFood);
-}
-
-function filterFood(e) {
-	e.preventDefault();
-	var $searchFood = $inputSearch.val().trim().toLowerCase();
-
-	if($inputSearch.val().trim().length > 0) {
-		var $filterRestaurant = accessData.filter(function(restaurant){
-			//console.log($filterRestaurant);
-			return (restaurant['name'].toLowerCase().indexOf($searchFood) >= 0);
-		});
-
-		//$clearInput.empty();
-		$filterRestaurant.forEach(function(restaurant) {
-			paintHTML(restaurant);
-		});
-
-	} 
-}
-	
-	//console.log(accessData);
-
-$(document).ready(loadPage);
+window.onload = loadPage();

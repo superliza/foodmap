@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="assets/images/taco.ico">
 		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 
@@ -32,7 +33,7 @@
     <div class="container hide">
       <div class="row">
         <div class="col s12">
-          <h2> MAPA </h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60216.100580746584!2d-99.17868757820003!3d19.3905190174334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff83579e4d6d%3A0xd30ad3537f5ef604!2sParque+Hundido!5e0!3m2!1ses-419!2smx!4v1525480790356" width="330" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -52,7 +53,7 @@
         <div class="col s12">
           <form>
             <div class="input-field">
-              <input id="search" class="clear-input" type="search" required placeholder="Ingresa tu platillo favorito">
+              <input id="search" class="clear-input" type="search" required placeholder="Ingresa tu restaurante favorito">
               <label class="label-icon" for="search"><i class="material-icons"></i></label>
             </div>           
           </form>
@@ -62,24 +63,9 @@
     
     <!-- images -->
     <div class="container contain-food hide">
-      <<div class="row">
-        <div class="col s6 col-image">
-          <!--<img src="http://lorempixel.com/350/200/food/" class="waves-effect waves-light modal-trigger responsive-img food-restaurant" data-target="modal1" alt="food">-->
-        </div>
-        <div class="col s6 col-image">
-          <!--<img src="http://lorempixel.com/350/200/food/" class="waves-effect waves-light modal-trigger responsive-img food-restaurant" data-target="modal1" alt="food">-->
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s4 col-image">
-          <!--<img src="http://lorempixel.com/350/200/food/" class="waves-effect waves-light modal-trigger responsive-img food-restaurant" data-target="modal1" alt="food">-->
-        </div>
-        <div class="col s4 col-image">
-          <!--<img src="http://lorempixel.com/350/200/food/" class="waves-effect waves-light modal-trigger responsive-img food-restaurant" data-target="modal1" alt="food">-->
-        </div>
-        <div class="col s4 col-image">
-          <!--<img src="http://lorempixel.com/350/200/food/" class="waves-effect waves-light modal-trigger responsive-img food-restaurant" data-target="modal1" alt="food">-->
-        </div>
+      <div class="row" id="pictures">
+        <!--<div class="col s6 col-image">
+          <img src="http://lorempixel.com/350/200/food/" class="waves-effect waves-light modal-trigger responsive-img food-restaurant" data-target="modal1" alt="food">-->
       </div>
     </div>
 
@@ -87,9 +73,9 @@
     <div id="modal1" class="modal">
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X</a>
       <div class="modal-content">
-        <!--<h4> Silvana </h4>
-        <img src="http://lorempixel.com/350/200/food/" alt="mapa">
-        <p> dirección </p>
+        <h4> </h4>
+        <p class="address"> </p>
+        <!--<img src="http://lorempixel.com/350/200/food/" alt="mapa">
         <p> servicio a domicilio </p>
         <a class="waves-effect waves-light btn"> Pedir ahora </a>-->
       </div>
