@@ -24,12 +24,13 @@ const paintData = () => {
 		// console.log(item)
 		let $restaurantName = $('<h5 />');
 		$restaurantName.text(item.name);
-		templateRestaurants += template.replace("NAME", item.name)
-									   .replace("NAME", item.name)
-									   .replace('NAME', item.name)
-									   .replace('ADDRESS', item.address)
-									   .replace('FOOD', item.food)
-									   .replace('SRC', item.photo);
+		templateRestaurants += template
+		.replace("NAME", item.name)
+		.replace("NAME", item.name)
+		.replace('NAME', item.name)
+		.replace('ADDRESS', item.address)
+		.replace('FOOD', item.food)
+		.replace('SRC', item.photo);
 	}
 
 	$pictures.html(templateRestaurants);
