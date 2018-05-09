@@ -16,3 +16,20 @@ input {
 	background-color: black !important;
 	color: white !important;
 }
+
+.responsive-img {
+	width: 100%;
+	height: 20vh !important;
+}
+
+.center-align {
+	font-size: 3em;
+}
+
+.foodmap {
+	color: #E9862B;
+}
+
+.iframe-center {
+	margin-left: 5em;
+}
