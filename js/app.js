@@ -51,13 +51,10 @@ const search = (e) => {
 		if ($(this).text().toLowerCase().indexOf(searchFood) !== -1) {
 			$(this).closest('div').show();
 		} else {
-			// $('#coincidences:empty').removeClass('hide');
 			$(this).closest('div').hide();
-			// $('#the-restaurants').empty();
 		}
 		
 	})
-	// $('#coincidences').empty();
 }
 
 const loadPage = () => {
