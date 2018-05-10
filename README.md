@@ -15,3 +15,6 @@ Es una WebApp que permite a los usuarios buscar por nombre de restaurante en un 
 * `MaterializeCSS`: Framework responsivo de CSS basado en Material Design.
 * `CSS`: Lenguaje de diseño para definir y crear la presentación de un documento HTML.
 * `HTML`: Lenguaje de marcado para crear la estructura de la página.
+
+## Capturas
+
