@@ -64,7 +64,7 @@ const loadPage = () => {
 	setTimeout(() => {
 		$('#splash-intro').fadeOut();
 		$('div, nav').removeClass('hide');
-	}, 4000)
+	}, 2000)
 	paintData();
 	$inputSearch.keyup(search);
 	$('.modal').modal();
