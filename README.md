@@ -1,5 +1,8 @@
 # Foodmap
 
+![imagen](https://user-images.githubusercontent.com/32879152/39856352-28682468-53f5-11e8-8ad2-a581a4d2228f.png)
+
+
 * **Track:** _Common Core_
 * **Empresa:** _Proyecto elaborado por alumna de [Laboratoria](http://www.laboratoria.la/)_
 * **Enlace:** [Enlace al proyecto](https://superliza.github.io/foodmap/)
