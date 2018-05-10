@@ -5,7 +5,7 @@ let data = {
        	   'name' : 'Silvana',
            'address' : 'Acueducto #5098 Xochimilco, CDMX',
            'food' : 'Mexicana',
-           'menu' : ['Tacos', 'Enchiladas', 'Chile Relleno', 'Mole'],
+           'menu' : 'Tacos, Enchiladas, Chile Relleno, Mole',
            'serviceHome' : true,
            'photo' : "assets/images/tacoss.jpg"
        },
@@ -14,7 +14,7 @@ let data = {
        	   'name' : 'Jonh',
            'address' : 'Halcon #4059 Xochimilco, CDMX',          
            'food' : 'Italiana',
-           'menu' : ['Lasaña', 'Pizza', 'Risotto', 'Carpaccio'],
+           'menu' : 'Lasaña, Pizza, Risotto, Carpaccio',
            'serviceHome' : false,
            'photo' : "assets/images/pizza.jpg"
        },
@@ -23,7 +23,7 @@ let data = {
        	   'name' : 'Lucile',
            'address' : 'Buenavista #2040 Cuahutémoc, CDMX',          
            'food' : 'Francesa',
-           'menu' : ['La ratatouille', 'Moules frites', 'Crépes', 'La raclette'],
+           'menu' : 'La ratatouille, Moules frites, Crépes, La raclette',
            'serviceHome' : true,
            'photo' : "assets/images/crepes.jpg"
        },
@@ -32,7 +32,7 @@ let data = {
        	   'name' : 'Amalia',
            'address' : 'Centro de Tlalpan #2040 Tlalpan, CDMX',          
            'food' : 'Japonesa',
-           'menu' : ['Natto', 'Kareraisu', 'Tsukemono', 'Sushi'],
+           'menu' : 'Natto, Kareraisu, Tsukemono, Sushi',
            'serviceHome' : false,
            'photo' : "assets/images/sushi.jpg"
        },
@@ -41,7 +41,7 @@ let data = {
             'name' : 'Manu',
             'address' : 'Divisón del Norte #2040 Coyoacán, CDMX',          
             'food' : 'Alemana',
-            'menu' : ['Codillo de cerdo', 'Quiche', 'Brunch'],
+            'menu' : 'Codillo de cerdo, Quiche, Brunch',
             'serviceHome' : true,
             'photo' : "assets/images/codillo.jpeg"
        },
@@ -50,7 +50,7 @@ let data = {
             'name' : 'Inti',
             'address' : 'Divisón del Norte #2040 Coyoacán, CDMX',          
             'food' : 'Vegana',
-            'menu' : ['Ensaladilla de bulgur', 'Tofu', 'Ensalada de espinacas'],
+            'menu' : 'Ensaladilla de bulgur, Tofu, Ensalada de espinacas',
             'serviceHome' : true,
             'photo' : "assets/images/vegana.jpg"
         }

@@ -4,7 +4,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="icon" href="assets/images/taco.ico">
 		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -30,11 +31,11 @@
     </nav>
 
     <!-- MAPA -->
-    <div class="container">
+    <div class="container hide">
       <div class="row">
         <div class="col s12">
           <iframe class="hide-on-small-only iframe-center" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.1286094760317!2d-99.1809285236564!3d19.37829331534791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff83579e4d6d%3A0xd30ad3537f5ef604!2sParque+Hundido!5e0!3m2!1ses-419!2smx!4v1525908998702" width="800" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-          <iframe class="hide-on-large-only hide-on-med-only" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60216.100580746584!2d-99.17868757820003!3d19.3905190174334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff83579e4d6d%3A0xd30ad3537f5ef604!2sParque+Hundido!5e0!3m2!1ses-419!2smx!4v1525480790356" width="330" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe class="hide-on-large-only hide-on-med-only" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60216.100580746584!2d-99.17868757820003!3d19.3905190174334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff83579e4d6d%3A0xd30ad3537f5ef604!2sParque+Hundido!5e0!3m2!1ses-419!2smx!4v1525480790356" width="290" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -63,7 +64,7 @@
     </div>
     
     <!-- images -->
-    <div class="container contain-food hide">
+    <div class="container contain-food hide" id="the-restaurants">
       <div class="row" id="pictures">
         <!--<div class="col s6 col-image">
           <img src="http://lorempixel.com/350/200/food/" class="waves-effect waves-light modal-trigger responsive-img food-restaurant" data-target="modal1" alt="food">-->
@@ -72,15 +73,37 @@
 
     <!-- modal -->
     <div id="modal1" class="modal">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X</a>
+      <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">X</a>
       <div class="modal-content">
-        <h4> </h4>
-        <p class="address"> </p>
-        <!--<img src="http://lorempixel.com/350/200/food/" alt="mapa">
-        <p> servicio a domicilio </p>
-        <a class="waves-effect waves-light btn"> Pedir ahora </a>-->
+        <div class="row">
+          <div class="col s12 name-modal">
+            <h4> </h4>
+            <iframe class="hide-on-small-only align-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.7887597612785!2d-99.180935885719!3d19.37829724743772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff83579e4d6d%3A0xd30ad3537f5ef604!2sParque+Hundido!5e0!3m2!1ses-419!2smx!4v1525918832057" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe class="hide-on-large-only hide-on-med-only" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60216.100580746584!2d-99.17868757820003!3d19.3905190174334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff83579e4d6d%3A0xd30ad3537f5ef604!2sParque+Hundido!5e0!3m2!1ses-419!2smx!4v1525480790356" width="210" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <!--<a class="waves-effect waves-light btn"> Pedir ahora </a>-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s6 modal-address">
+            <p class="title-address center-align"> Dirección </p>
+            <p class="address center-align"> </p>
+          </div>
+          <div class="col s6 modal-menu">
+            <p class="title-menu center-align"> Menu </p>
+            <p class="menu center-align"> </p>
+          </div>
+        </div>
+        <a class="waves-effect waves-light btn button">Pedir ahora</a>
       </div>
     </div>
+
+    <section class="center-align container hide" id="coincidences">
+      <div class="row">
+        <div class="col s12">
+          <p> No se encontraron coincidencias <i class="far fa-frown"></i></p>
+        </div>
+      </div>
+    </section>
 
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>

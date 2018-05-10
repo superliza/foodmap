@@ -8,7 +8,7 @@ h1 {
 	padding-top: 3em;
 }
 
-h4, .address {
+h4, .address, .menu, .title-menu, .title-address {
 	color: black;
 }
 
@@ -32,4 +32,20 @@ input {
 
 .iframe-center {
 	margin-left: 5em;
+}
+
+.align-iframe {
+	margin-left: 3em;
+}
+
+.address, .menu, .title-menu, .title-address {
+	font-size: 1.5em;
+}
+
+.title-menu, .title-address {
+	font-weight: 700;
+}
+
+.button {
+	margin-left: 18em;
 }
