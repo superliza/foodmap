@@ -18,3 +18,8 @@ Es una WebApp que permite a los usuarios buscar por nombre de restaurante en un 
 
 ## Capturas
 
+![Mapa](assets/images/map.jpg)
+![Imágenes de los restaurantes](assets/images/images-restaurants.jpg)
+![Modal con nombre de restaurante y mapa](assets/images/modal-name-map.jpg)
+![Modal con el menú](assets/images/modal-menu.jpg)
+![Filtro de búsqueda por nombre de restaurante](assets/images/filtro.jpg)
